@@ -1,0 +1,163 @@
+body {
+    background-image: url(1033.gif);
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 58vw;
+    margin-left: 3vw;
+    font-size: 12vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#00d5ce;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 10px;
+    margin: 20px;
+    border-color: rgb(41, 45, 40);
+    background-color:  rgb(41, 45, 40);
+    letter-spacing: .1em;
+    line-height: 1em;
+}
+
+em{
+    color:#ff0000;
+    font-style: normal;
+}
+
+.infobox {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(22, 26, 16);
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-width: 10px;
+    padding: 3vw;
+    margin: 20px;
+    border-color: #bc1212; 
+    background-color:  #6ba1d7;
+}
+
+.textbox{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 30vw;
+    height: 30vh;
+    background-image: url(meow.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    p{
+        position: relative;
+        top: -3%;
+        right: 5%;
+        width: 50%;
+    }
+}
+
+#textbox1{
+    top: 120vh;
+    right: 5vw;
+}
+
+#infobox1{
+    top: 170vh;
+    right: 20vw;
+}
+
+#infobox2{
+    top: 107vh;
+    right: 40vw;
+}
+
+#infobox3{
+    top: 10vh;
+    right: 10vw;
+    width: 16vw;
+}
+
+.option{
+    display:flex;
+    gap: 50px;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    p{
+        margin-top: -1vh;
+        color:#f8f8f8;
+        em{
+            color:#00d9ff;
+        }
+    }
+}
+
+#cat{
+    width: 40vw;
+    margin-top: -3vh;
+}
+
+#longOption{
+    flex-wrap:wrap;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+#emmettFace{
+    position: absolute;
+    top: 130vh;
+    right: 20vw;
+    width: 30%;
+}
+
+#emmettFace2{
+    position: absolute;
+    top: 80vh;
+    right: 10vw;
+    width: 20%;
+}
+
+#textbox2{
+    background-image: url(meowFlip.png);
+    top: 75vh;
+    right: 22vw;
+}
+
+footer{
+    position: absolute;
+    top:250vh
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+a:hover {
+  color: rgb(0, 255, 106);
+}
