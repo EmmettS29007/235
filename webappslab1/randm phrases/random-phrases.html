@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Random Phrases</title>
+	<link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header><h1>Emmett Vocabulary</h1></header>
+
+    <button onclick="generatePhrase()"> Press Me! </button>
+    
+    <div id="wordBox">
+        <p id="tehMessage">bang!</p>
+    </div>
+
+<footer>by the big emmett <b>2027</b></footer>
+<script>
+	"use strict"; 
+  
+     let phrases = ["meow", "winsauce", "crazysauce","whats ur favorite color","ourgh"]; 
+
+    function generatePhrase(){
+        document.getElementById("tehMessage").innerHTML = phrases[Math.floor(Math.random()*5)];
+    }
+	</script>
+</body>
+</html>
