@@ -1,0 +1,42 @@
+body{
+    background-image: url(falling-leaves-preview.gif);
+    font-family: "Share Tech";
+}
+
+h1{
+    color: olive;
+    display: flex;
+    justify-content: center;
+    font-size: 5vw;
+    background-color: antiquewhite;
+}
+
+button{
+        background-color: rgb(237, 240, 220);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+        width: 50%;
+        font-size: 2vw;
+        font-family: "Share Tech";
+
+}
+
+button:hover{
+    background-color: rgb(238, 255, 142);
+}
+button:active{
+    background-color: rgb(145, 189, 120);
+}
+
+#wordBox{
+    background-color: bisque;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    width: 75%;
+    font-size: 10vw;
+}
+
