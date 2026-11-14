@@ -89,7 +89,7 @@
 		
 		// 6 - display final results to user
 		document.querySelector("#content").innerHTML = bigString;
-	}	
+	}
 
 	function breedListLoaded(e){
 		// 1 - e.target is the xhr object
@@ -112,9 +112,13 @@
 		let results = obj.data
 		let bigString = "<p><i>Here is the result!</i></p>";
 
-		results.forEach(element => {
-			console.log(element)
-		});
+		for (let i=0;i<results.length;i++){
+			let result = results[i];
+			let url = result.url;
+			let title = result.title;
+			let line = `<p class='result'><a href='${url}'>${title}</a></p>`;
+			bigString += line;
+		}
 
 		// 6 - display final results to user
 		document.querySelector("#content").innerHTML = bigString;

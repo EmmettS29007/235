@@ -12,7 +12,7 @@
 <body>
     <header><h1>Emmett Vocabulary</h1></header>
 
-    <button onclick="generatePhrase()"> Press Me! </button>
+    <button onclick="displayQuote()"> Press Me! </button>
     
     <div id="wordBox">
         <p id="tehMessage">bang!</p>
@@ -24,7 +24,7 @@
   
      let phrases = ["meow", "winsauce", "crazysauce","whats ur favorite color","ourgh"]; 
 
-    function generatePhrase(){
+    function displayQuote(){
         document.getElementById("tehMessage").innerHTML = phrases[Math.floor(Math.random()*5)];
     }
 	</script>
