@@ -10,8 +10,9 @@
 	window.onload = init;
 	
 	function init(){
+		getBreedList;
 		document.querySelector("#search").onclick = getData;
-		document.querySelector("#byBreed").onclick = getBreedList;
+		
 	}
 	
 	function getData(){
@@ -110,20 +111,44 @@
 		
 		// 5 - if there is an array of results, loop through them
 		let results = obj.data
-		let bigString = "<p><i>Here is the result!</i></p>";
 
-		for (let i=0;i<results.length;i++){
-			let result = results[i];
-			let url = result.url;
-			let title = result.title;
-			let line = `<p class='result'><a href='${url}'>${title}</a></p>`;
-			bigString += line;
-		}
+		let breedGrouping = Object.values(results.message);
+    	let breedListNames = Object.keys(results.message);
+
+		let breedIndexNumber = breedGrouping.indexOf(subBreed);
+		let breedName = breedListNames[breedIndexNumber];
+		
+		console.log(breedName)
+		return createMenuBreed(breedName);
 
 		// 6 - display final results to user
 		document.querySelector("#content").innerHTML = bigString;
-	}	
 	
+	}
+
+	function createMenuBreed(name) {
+  		let optionTag = createNode('option');
+  		optionTag.setAttribute('value', name);
+  		let text = document.createTextNode(capitalize(name));
+  		optionTag.appendChild(text);
+  		append(selectTag, optionTag);
+	}
+
+	function createMenuBreedGroup(name, arr){
+		let optGroupTag = createNode('optgroup');
+		optGroupTag.setAttribute('value', name);
+		optGroupTag.setAttribute('label', capitalize(name));
+		append(selectTag, optGroupTag);
+		
+		return arr.map(ele); {
+			let optionTag = createNode('option');
+			optionTag.setAttribute('value', ele);
+			optionTag.setAttribute('data-breed', name);
+			let text = document.createTextNode(capitalize(ele) + " " + capitalize(name));
+			optionTag.appendChild(text);
+			append(optGroupTag, optionTag);
+		}
+	}
   </script>
 
 </head>
