@@ -1,0 +1,42 @@
+body {
+  background-color: rgb(255, 210, 212);
+  font-family: "Courier New", serif;
+}
+
+h1 { 
+    color:red;
+    font-family: sans-serif;
+    border-bottom: 1px solid blue;
+    }
+
+h2 {
+    color:rgb(0, 0, 0);
+}
+
+blockquote { 
+    background-color: lightgray;
+    padding: 1rem;
+    }
+
+p{
+    margin-left: 100px;
+}
+
+footer{
+    background-color: rgb(255, 116, 122);
+}
+
+main{
+    border: 1px dashed red;
+    margin:0 auto;
+    width:4/5vw;
+    padding: 2rem;
+    background-color: rgb(245, 244, 247);
+}
+
+.floaptyImage {
+    float:right; 
+    margin: 0 12px;
+    width: 125px;
+    height: 175px;
+}

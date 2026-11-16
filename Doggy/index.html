@@ -10,10 +10,11 @@
 	window.onload = init;
 	
 	function init(){
-		getBreedList;
+		getBreedList();
 		document.querySelector("#search").onclick = getData;
-		
+		document.querySelector("#byBreed").onclick = getBreedSpecificData;
 	}
+	
 	
 	function getData(){
 		// 1 - main entry point to web service
@@ -45,8 +46,39 @@
 		xhr.send();
 	}
 	
+	function getBreedSpecificData(){
+		let breedname = document.getElementById("breeds").value
+		// 1 - main entry point to web service
+		const SERVICE_URL = "https://dog.ceo/api/breed/" + breedname + "/images/random";
+		
+		// No API Key required!
+		
+		// 2 - build up our URL string
+		// not necessary for this service endpoint
+		let url = SERVICE_URL;
+		
+		// 3 - parse the user entered term we wish to search
+		// not necessary for this service endpoint
+		
+		// 4 - update the UI
+		document.querySelector("#debug").innerHTML = `<b>Querying web service with:</b> <a href="${url}" target="_blank">${url}</a>`;
+		
+		// 5 - create a new XHR object
+		let xhr = new XMLHttpRequest();
+
+		// 6 - set the onload handler
+		xhr.onload = dataLoaded;
+	
+		// 7 - set the onerror handler
+		xhr.onerror = dataError;
+
+		// 8 - open connection and send the request
+		xhr.open("GET",url);
+		xhr.send();
+	}
+	
 	function getBreedList(){
-				// 5 - create a new XHR object
+		// 5 - create a new XHR object
 		let xhr = new XMLHttpRequest();
 
 		// 6 - set the onload handler
@@ -110,45 +142,24 @@
 		}
 		
 		// 5 - if there is an array of results, loop through them
-		let results = obj.data
+		let results = obj.message;
 
-		let breedGrouping = Object.values(results.message);
-    	let breedListNames = Object.keys(results.message);
+		console.log(results)
+		console.log(Object.keys(results).length);
 
-		let breedIndexNumber = breedGrouping.indexOf(subBreed);
-		let breedName = breedListNames[breedIndexNumber];
-		
-		console.log(breedName)
-		return createMenuBreed(breedName);
-
-		// 6 - display final results to user
-		document.querySelector("#content").innerHTML = bigString;
-	
+		for (let index = 0; index < Object.keys(results).length; index++) {
+			const element = Object.keys(results)[index];
+			createMenuBreed(element);
+		}
 	}
 
 	function createMenuBreed(name) {
-  		let optionTag = createNode('option');
-  		optionTag.setAttribute('value', name);
-  		let text = document.createTextNode(capitalize(name));
-  		optionTag.appendChild(text);
-  		append(selectTag, optionTag);
+  		var opt = document.createElement('option');
+    	opt.value = name;
+    	opt.innerHTML = name;
+    	document.getElementById("breeds").appendChild(opt);
 	}
 
-	function createMenuBreedGroup(name, arr){
-		let optGroupTag = createNode('optgroup');
-		optGroupTag.setAttribute('value', name);
-		optGroupTag.setAttribute('label', capitalize(name));
-		append(selectTag, optGroupTag);
-		
-		return arr.map(ele); {
-			let optionTag = createNode('option');
-			optionTag.setAttribute('value', ele);
-			optionTag.setAttribute('data-breed', name);
-			let text = document.createTextNode(capitalize(ele) + " " + capitalize(name));
-			optionTag.appendChild(text);
-			append(optGroupTag, optionTag);
-		}
-	}
   </script>
 
 </head>
@@ -160,16 +171,10 @@
 <p><button type="button" id="search" class="green">Random Dog!</button></p>
 <p><button type="button" id="byBreed" class="green">Search by breed</button></p>
 
-
-<select name="breed" id="breeds">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-</select>
+<select name="breed" id="breeds"></select>
 
 <p id="debug"></p>
-<hr>
+
 <h2>Results</h2>
  <div id="content">
  <p>No data yet!</p>

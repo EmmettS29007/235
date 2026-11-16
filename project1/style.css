@@ -1,0 +1,153 @@
+body {
+    background-image: url(circuitBg.png);
+    background-size: 100% auto;
+    background-position: top;
+}
+
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 58vw;
+    margin-left: 3vw;
+    font-size: 12vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:#CDD500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 10px;
+    margin: 20px;
+    border-color: rgb(41, 45, 40);
+    background-color:  rgb(41, 45, 40);
+    letter-spacing: .1em;
+    line-height: 1em;
+}
+
+em{
+    color:#E30613;
+    font-style: normal;
+}
+
+.infobox {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    font-size: 2vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(22, 26, 16);
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-width: 10px;
+    padding: 3vw;
+    margin: 20px;
+    border-color: #00632E; 
+    background-color:  #C6D76B;
+}
+
+.textbox{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    background-image: url(textbox.png);
+    p{
+        position: relative;
+        top: -10%;
+        right: 0%;
+        width: 60%;
+    }
+}
+
+#textbox1{
+    top: 130vh;
+    right: 20vw;
+    background{
+        width: 10vw;
+        height: 10vh;
+    }
+}
+
+#infobox1{
+    top: 180vh;
+    right: 20vw;
+}
+
+#infobox2{
+    top: 120vh;
+    right: 40vw;
+}
+
+#infobox3{
+    top: 10vh;
+    right: 10vw;
+    width: 16vw;
+}
+
+.option{
+    display:flex;
+    gap: 50px;
+    flex-wrap:nowrap;
+    flex-direction: row;
+    p{
+        margin-top: -1vh;
+        color:#0B8BB6;
+        em{
+            color:#1D1D1B;
+        }
+    }
+}
+
+#startButton{
+    width: 40vw;
+    margin-top: -3vh;
+}
+
+#longOption{
+    flex-wrap:wrap;
+    flex-direction: column;
+    row-gap: 1vh;
+}
+
+#robot{
+    position: absolute;
+    top: 140vh;
+    right: 30vw;
+    width: 20%;
+}
+
+footer{
+    position: absolute;
+    top:250vh
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
+a:hover {
+  color: rgb(0, 255, 106);
+}

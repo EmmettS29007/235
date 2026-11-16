@@ -1,3 +1,69 @@
 body{
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    background-image: url("1036.png");
 }
+ 		
+h1{
+ 	margin:0;
+ 	color:rgb(197, 233, 233);
+ 	text-align: center;
+ 	font-size:100px;
+ 	padding-top: 35px;
+}
+
+h2{
+ 	margin:0;
+ 	color:rgb(197, 233, 233);
+ 	text-align: center;
+ 	font-size:50px;
+ 	padding-top: 35px;
+}
+
+#debug{
+    color:rgb(197, 233, 233);
+    :link{
+        color:rgb(152, 190, 190);
+    }
+}
+
+#content{
+    img{
+        border:8px,solid, #c1d1ee;
+    }
+ 	
+}
+
+button{
+	display : inline-block;
+	cursor : pointer;
+	border-style : solid;
+	border-width : 1px;
+	border-radius : 50px;
+	padding : 10px 18px;
+	box-shadow : 0 1px 4px rgba(0,0,0,.6);
+	font-size : 9.5pt;
+	font-weight : bold;
+	color : #fff;
+	text-shadow : 0 1px 3px rgba(0,0,0,.4);
+	font-family : sans-serif;
+	text-decoration : none;
+}
+		
+button.green{
+	border-color: #5bf4ff;
+	background: #c1d1ee;
+	background: linear-gradient(to top, #8fd1d6 0%,#00488c 100%);
+}
+		
+button:hover{
+	background: #e287d3;
+}
+		
+button:active{
+	background: #c5cfb8;
+	box-shadow : 0 0 6px rgba(0,0,0,.6);
+	}
+		
+button:focus {outline:0;}
+		
